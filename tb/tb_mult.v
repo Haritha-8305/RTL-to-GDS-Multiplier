@@ -44,7 +44,7 @@ initial begin
             expected=i*j;
 
             repeat(2) @(posedge clk);
-            #1;
+            #2;
 
             if(p!==expected) begin
                 $display("MISMATCH: a=%0d b=%0d expected=%0d got=%0d",i,j,expected,p);
